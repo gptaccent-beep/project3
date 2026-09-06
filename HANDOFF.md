@@ -32,3 +32,12 @@ The requested shared login is implemented with environment variables and an HTTP
 - The master logo slot updates header, footer and favicon together.
 - Arabic uses Noto Kufi Arabic with RTL-specific typography and layout adjustments.
 - Benefit cards, story steps, reviews and ecosystem stats are localized in all three languages.
+
+
+## Part 3 additions
+- The admin interface has an independent Arabic/English toggle and full RTL layout.
+- No default credentials are embedded in client code. Configure `ADMIN_USERNAME`, `ADMIN_PASSWORD_HASH`, and `ADMIN_SESSION_SECRET` on the server.
+- Generate a password hash with `node scripts/hash-password.mjs "your-long-password"`.
+- Login is limited to five failed attempts per IP in a 15-minute window; sessions use HTTP-only, SameSite=Strict, secure-in-production cookies.
+- Admins can change the password in Settings; the replacement scrypt hash is stored server-side in `data/admin-security.json`. On Vercel, move this small secret record to durable server storage.
+- Product tags are editable by index in AR/EN/FR, with add, remove, and reorder controls.
