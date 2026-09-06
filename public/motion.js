@@ -25,7 +25,7 @@
           io.unobserve(el)
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -14% 0px' }
+      { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
     )
     items.forEach(function (el) { io.observe(el) })
   }
@@ -102,8 +102,8 @@
     document.querySelectorAll('.btn').forEach(function (btn) {
       btn.addEventListener('mousemove', function (e) {
         var r = btn.getBoundingClientRect()
-        var mx = ((e.clientX - r.left) / r.width - 0.5) * 9
-        var my = ((e.clientY - r.top) / r.height - 0.5) * 7
+        var mx = ((e.clientX - r.left) / r.width - 0.5) * 12
+        var my = ((e.clientY - r.top) / r.height - 0.5) * 10
         btn.style.setProperty('--mx', mx.toFixed(2) + 'px')
         btn.style.setProperty('--my', my.toFixed(2) + 'px')
       })
@@ -120,8 +120,8 @@
     document.querySelectorAll('.card-3d').forEach(function (card) {
       card.addEventListener('mousemove', function (e) {
         var r = card.getBoundingClientRect()
-        var ry = ((e.clientX - r.left) / r.width - 0.5) * 8
-        var rx = -((e.clientY - r.top) / r.height - 0.5) * 6.5
+        var ry = ((e.clientX - r.left) / r.width - 0.5) * 11
+        var rx = -((e.clientY - r.top) / r.height - 0.5) * 9
         card.style.setProperty('--ry', ry.toFixed(2) + 'deg')
         card.style.setProperty('--rx', rx.toFixed(2) + 'deg')
       })
@@ -141,7 +141,7 @@
     function frame() {
       var vh = window.innerHeight
       layers.forEach(function (el) {
-        var speed = parseFloat(el.getAttribute('data-parallax')) || 0.24
+        var speed = parseFloat(el.getAttribute('data-parallax')) || 0.15
         var r = el.getBoundingClientRect()
         var progress = (r.top + r.height / 2 - vh / 2) / vh
         el.style.transform = 'translate3d(0,' + (progress * speed * 100).toFixed(2) + 'px,0)'
@@ -157,32 +157,32 @@
   /* ------------------------------------------- 7. Hero particles and bees */
   function beeSvg() {
     return '<svg viewBox="0 0 40 30" aria-hidden="true">' +
-      '<ellipse class="wing" cx="17" cy="9" rx="9" ry="5" fill="#f6efe6" opacity=".5"/>' +
-      '<ellipse class="wing" cx="24" cy="9" rx="8" ry="4.5" fill="#f6efe6" opacity=".38"/>' +
-      '<ellipse cx="22" cy="17" rx="11" ry="7" fill="#3d2f28"/>' +
-      '<path d="M17 11.5c3 1.6 3 9.4 0 11" stroke="#e79b72" stroke-width="3.4" fill="none"/>' +
-      '<path d="M24 11c3 1.8 3 9.6 0 11.4" stroke="#d4794e" stroke-width="3" fill="none"/>' +
-      '<circle cx="32" cy="15" r="3.4" fill="#2a1f1a"/>' +
+      '<ellipse class="wing" cx="17" cy="9" rx="9" ry="5" fill="#fff4d6" opacity=".5"/>' +
+      '<ellipse class="wing" cx="24" cy="9" rx="8" ry="4.5" fill="#fff4d6" opacity=".38"/>' +
+      '<ellipse cx="22" cy="17" rx="11" ry="7" fill="#3a220f"/>' +
+      '<path d="M17 11.5c3 1.6 3 9.4 0 11" stroke="#f7c948" stroke-width="3.4" fill="none"/>' +
+      '<path d="M24 11c3 1.8 3 9.6 0 11.4" stroke="#d89b22" stroke-width="3" fill="none"/>' +
+      '<circle cx="32" cy="15" r="3.4" fill="#241409"/>' +
       '</svg>'
   }
 
   function initParticles() {
     var host = document.querySelector('.particles')
     if (!host || reduced) return
-    var count = window.innerWidth < 720 ? 10 : 22
+    var count = window.innerWidth < 720 ? 14 : 30
     var html = ''
     for (var i = 0; i < count; i++) {
       var size = (3 + Math.random() * 6).toFixed(1)
       html += '<span class="particle" style="left:' + (Math.random() * 100).toFixed(2) + '%;' +
         'width:' + size + 'px;height:' + size + 'px;' +
         '--dx:' + (Math.random() * 90 - 45).toFixed(0) + 'px;' +
-        'animation-duration:' + (15 + Math.random() * 14).toFixed(1) + 's;' +
-        'animation-delay:-' + (Math.random() * 22).toFixed(1) + 's;' +
+        'animation-duration:' + (9 + Math.random() * 11).toFixed(1) + 's;' +
+        'animation-delay:-' + (Math.random() * 14).toFixed(1) + 's;' +
         'opacity:' + (0.35 + Math.random() * 0.5).toFixed(2) + '"></span>'
     }
     var bee = beeSvg()
-    html += '<span class="bee" style="left:13%;top:24%;animation-duration:26s">' + bee + '</span>' +
-      '<span class="bee" style="left:62%;top:64%;width:18px;animation-duration:34s;animation-delay:-9s;opacity:.75">' + bee + '</span>'
+    html += '<span class="bee" style="left:13%;top:24%;animation-duration:16s">' + bee + '</span>' +
+      '<span class="bee" style="left:62%;top:64%;width:18px;animation-duration:21s;animation-delay:-6s;opacity:.75">' + bee + '</span>'
     host.innerHTML = html
   }
 
@@ -215,7 +215,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) activate(steps.indexOf(e.target))
       })
-    }, { threshold: 0.55 })
+    }, { threshold: 0.6 })
     steps.forEach(function (s) { io.observe(s) })
   }
 
@@ -251,8 +251,8 @@
         var suffix = el.getAttribute('data-suffix') || ''
         var t0 = performance.now()
         function tick(now) {
-          var p = Math.min((now - t0) / 2600, 1)
-          var v = target * (1 - Math.pow(1 - p, 4))
+          var p = Math.min((now - t0) / 1400, 1)
+          var v = target * (1 - Math.pow(1 - p, 3))
           el.textContent = (target % 1 ? v.toFixed(1) : Math.round(v)) + suffix
           if (p < 1) requestAnimationFrame(tick)
         }
@@ -261,6 +261,51 @@
       })
     }, { threshold: 0.5 })
     nums.forEach(function (n) { io.observe(n) })
+  }
+
+  /* --------------------------------------- 11. Premium pointer atmosphere */
+  function initCursorAura() {
+    if (reduced || window.matchMedia('(hover: none)').matches) return
+    var aura = document.createElement('span')
+    aura.className = 'cursor-aura'
+    aura.setAttribute('aria-hidden', 'true')
+    document.body.appendChild(aura)
+
+    var x = window.innerWidth / 2
+    var y = window.innerHeight / 2
+    var tx = x
+    var ty = y
+    var moving = false
+
+    function frame() {
+      x += (tx - x) * 0.12
+      y += (ty - y) * 0.12
+      aura.style.setProperty('--cx', x.toFixed(1) + 'px')
+      aura.style.setProperty('--cy', y.toFixed(1) + 'px')
+      if (Math.abs(tx - x) + Math.abs(ty - y) > 0.3) requestAnimationFrame(frame)
+      else moving = false
+    }
+
+    window.addEventListener('pointermove', function (e) {
+      tx = e.clientX
+      ty = e.clientY
+      if (!moving) { moving = true; requestAnimationFrame(frame) }
+    }, { passive: true })
+  }
+
+  /* A soft, position-aware reflection across product cards. */
+  function initCardSpotlight() {
+    if (reduced || window.matchMedia('(hover: none)').matches) return
+    document.querySelectorAll('.card-3d').forEach(function (card) {
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect()
+        card.style.setProperty('--spot-x', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%')
+        card.style.setProperty('--spot-y', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%')
+      })
+    })
+    document.querySelectorAll('.benefit').forEach(function (card, index) {
+      card.setAttribute('data-index', String(index + 1).padStart(2, '0'))
+    })
   }
 
   function boot() {
@@ -274,6 +319,8 @@
     initTimeline()
     initSlider()
     initCounters()
+    initCursorAura()
+    initCardSpotlight()
   }
 
   if (document.readyState === 'loading') {

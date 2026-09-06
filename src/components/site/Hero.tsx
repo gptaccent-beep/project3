@@ -156,10 +156,10 @@ export default function Hero({
 function Bee({ style, warm }: { style?: CSSProperties; warm?: boolean }) {
   return (
     <svg className="bee" style={style} viewBox="0 0 40 28" fill="none" aria-hidden="true">
-      <ellipse className="wing" cx="17" cy="9" rx="7" ry="4" fill="#f6efe6" opacity=".55" />
-      <ellipse cx="22" cy="16" rx="9" ry="6" fill={warm ? "#e79b72" : "#d4794e"} />
-      <path d="M18 11c1 3 1 7 0 10M23 10c1 4 1 8 0 12" stroke="#2a1f1a" strokeWidth="2" />
-      <circle cx="31" cy="14" r="3.4" fill="#2a1f1a" />
+      <ellipse className="wing" cx="17" cy="9" rx="7" ry="4" fill="#fff4d6" opacity=".55" />
+      <ellipse cx="22" cy="16" rx="9" ry="6" fill={warm ? "#f7c948" : "#d89b22"} />
+      <path d="M18 11c1 3 1 7 0 10M23 10c1 4 1 8 0 12" stroke="#24140a" strokeWidth="2" />
+      <circle cx="31" cy="14" r="3.4" fill="#24140a" />
     </svg>
   )
 }

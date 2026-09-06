@@ -1,6 +1,7 @@
 import type { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
 import "./globals.css"
+import "./visual-premium.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://bouzid.com"),
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#2a1f1a",
+  themeColor: "#24140a",
   width: "device-width",
   initialScale: 1,
 }
@@ -68,7 +69,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
         />
         <script
           type="application/ld+json"
