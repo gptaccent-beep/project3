@@ -23,3 +23,12 @@ The requested shared login is implemented with environment variables and an HTTP
 
 ## About the “domain + 0” shortcut
 `https://example.com0` is a different and generally invalid hostname, so an application cannot route it. The safe equivalent `/0` is included and redirects to `/admin`. A true `domain0` address would require owning and configuring that separate domain in DNS.
+
+
+## Part 2 additions
+- All storefront prices are MAD and editable per product.
+- Nine seeded products are organized into editable translated categories.
+- Product buttons collect quantity, buyer phone and location, then open a localized WhatsApp order to the number in Settings.
+- The master logo slot updates header, footer and favicon together.
+- Arabic uses Noto Kufi Arabic with RTL-specific typography and layout adjustments.
+- Benefit cards, story steps, reviews and ecosystem stats are localized in all three languages.

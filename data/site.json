@@ -106,13 +106,121 @@
       "natureBody": "ثلث ما يصل إلى مائدتك يعتمد على الملقحات. مناحلنا تعيد ممرات الغذاء البرية، وكل مرطبان يمول زراعة المزيد من الزهور.",
       "reviewsEyebrow": "محبوب لدى 2,140 أسرة",
       "reviewsTitle": "ما يتركه المرطبان في الذاكرة",
-      "ctaEyebrow": "توصيل مجاني للطلبات فوق €60",
+      "ctaEyebrow": "توصيل مجاني للطلبات فوق 600 د.م.",
       "ctaTitle": "أدخل ذهب الطبيعة",
       "ctaAccent": "إلى بيتك.",
       "ctaBody": "محصول هذا الموسم محدود. احجز مرطبانك وسنرسله خلال 48 ساعة.",
       "footerBody": "نحالون عائليون منذ 1974. عسل خام محصول يدويًا ويمكن تتبعه إلى الخلية.",
       "copyright": "جميع الحقوق محفوظة.",
-      "purity": "خام · غير مصفى · غير مبستر"
+      "purity": "خام · غير مصفى · غير مبستر",
+      "filterAll": "الكل",
+      "categoryLabel": "الفئة",
+      "stock_in_stock": "متوفر",
+      "stock_low_stock": "كمية محدودة",
+      "stock_out_of_stock": "غير متوفر",
+      "orderWhatsApp": "اطلب عبر واتساب",
+      "quantity": "الكمية",
+      "buyerPhone": "رقم هاتفك",
+      "location": "المدينة أو العنوان",
+      "cancel": "إلغاء",
+      "sendOrder": "إرسال الطلب",
+      "orderTitle": "أكمل طلبك",
+      "orderIntro": "سنفتح واتساب برسالة طلب جاهزة.",
+      "phonePlaceholder": "06 XX XX XX XX",
+      "locationPlaceholder": "مثال: الدار البيضاء، المعاريف",
+      "deliveryTrust": "توصيل سريع في المغرب · الدفع عند التسليم",
+      "featuredOffers": "عروض الموسم",
+      "bundleLabel": "باقة توفير",
+      "promoLabel": "رمز الخصم",
+      "benefits": [
+        {
+          "icon": "natural",
+          "title": "طبيعي 100%",
+          "body": "خام، غير مبستر وغير مصفى. مكوّن واحد فقط: العسل."
+        },
+        {
+          "icon": "nutrients",
+          "title": "غني بالعناصر الطبيعية",
+          "body": "نحافظ على الإنزيمات وحبوب اللقاح ومضادات الأكسدة دون تسخين."
+        },
+        {
+          "icon": "sustainable",
+          "title": "إنتاج مستدام",
+          "body": "نترك للنحل مؤونته ونحصد الفائض فقط مع إعادة زراعة المروج."
+        },
+        {
+          "icon": "traditional",
+          "title": "حصاد تقليدي",
+          "body": "إطارات مرفوعة يدويًا واستخراج بارد وتهدئة بالجاذبية."
+        }
+      ],
+      "steps": [
+        {
+          "num": "الخطوة 01",
+          "title": "الإزهار",
+          "body": "في أبريل تتفتح المروج وننقل الخلايا نحو الزعتر والخزامى البرية."
+        },
+        {
+          "num": "الخطوة 02",
+          "title": "جمع الرحيق",
+          "body": "تزور النحلة العاملة مئات الأزهار لتجمع رحيق الموسم."
+        },
+        {
+          "num": "الخطوة 03",
+          "title": "النضج",
+          "body": "ينضج الرحيق داخل الشمع حتى تغلقه النحلات بأنفسهن."
+        },
+        {
+          "num": "الخطوة 04",
+          "title": "الحصاد",
+          "body": "ترفع الإطارات يدويًا عند الفجر ويستخرج العسل على البارد."
+        },
+        {
+          "num": "الخطوة 05",
+          "title": "المرطبان",
+          "body": "يعبأ في الزجاج خلال 48 ساعة ويختبر لضمان النقاء."
+        }
+      ],
+      "reviews": [
+        {
+          "quote": "ملعقة واحدة أعادت لي مذاق حقول الصيف. جودة واضحة من أول تجربة.",
+          "name": "أمينة ب.",
+          "meta": "الدار البيضاء، المغرب",
+          "initials": "أب"
+        },
+        {
+          "quote": "نقدمه مع الجبن لضيوفنا، ودائمًا يسألون عن مصدره.",
+          "name": "كريم ل.",
+          "meta": "طاهٍ، الرباط",
+          "initials": "كل"
+        },
+        {
+          "quote": "تتبّع واضح للمحصول والمنحل. أخيرًا علامة عسل تعرض عملها بشفافية.",
+          "name": "سلمى هـ.",
+          "meta": "مراكش، المغرب",
+          "initials": "سه"
+        }
+      ],
+      "natureStats": [
+        {
+          "value": "12",
+          "count": 12,
+          "suffix": " هكتار",
+          "label": "مروج أعيد زرعها"
+        },
+        {
+          "value": "30",
+          "count": 30,
+          "suffix": "%",
+          "label": "من الخلايا دون حصاد"
+        },
+        {
+          "value": "2",
+          "count": 2,
+          "suffix": "%",
+          "label": "لأبحاث الملقحات"
+        }
+      ]
     },
     "en": {
       "nav": [
@@ -145,13 +253,121 @@
       "natureBody": "A third of everything on your table depends on pollinators. Every jar helps restore wildflower forage.",
       "reviewsEyebrow": "Loved by 2,140 households",
       "reviewsTitle": "What the jar leaves behind",
-      "ctaEyebrow": "Free delivery over €60",
+      "ctaEyebrow": "Free delivery over 600 MAD",
       "ctaTitle": "Bring nature’s gold",
       "ctaAccent": "into your home.",
       "ctaBody": "This season’s harvest is limited. Reserve yours and we ship within 48 hours.",
       "footerBody": "Family beekeepers since 1974. Raw honey, harvested by hand, traceable to the hive.",
       "copyright": "All rights reserved.",
-      "purity": "Raw · Unfiltered · Unpasteurised"
+      "purity": "Raw · Unfiltered · Unpasteurised",
+      "filterAll": "All",
+      "categoryLabel": "Category",
+      "stock_in_stock": "In stock",
+      "stock_low_stock": "Low stock",
+      "stock_out_of_stock": "Out of stock",
+      "orderWhatsApp": "Order on WhatsApp",
+      "quantity": "Quantity",
+      "buyerPhone": "Your phone number",
+      "location": "City or delivery location",
+      "cancel": "Cancel",
+      "sendOrder": "Continue to WhatsApp",
+      "orderTitle": "Complete your order",
+      "orderIntro": "We will open WhatsApp with your order ready to send.",
+      "phonePlaceholder": "e.g. 06 XX XX XX XX",
+      "locationPlaceholder": "e.g. Casablanca, Maarif",
+      "deliveryTrust": "Fast delivery in Morocco · Pay on delivery",
+      "featuredOffers": "Seasonal offers",
+      "bundleLabel": "Bundle value",
+      "promoLabel": "Discount code",
+      "benefits": [
+        {
+          "icon": "natural",
+          "title": "100% natural",
+          "body": "Raw, unpasteurised and unfiltered. One ingredient: honey."
+        },
+        {
+          "icon": "nutrients",
+          "title": "Naturally nutrient-rich",
+          "body": "Living enzymes, pollen and antioxidants are protected without heat."
+        },
+        {
+          "icon": "sustainable",
+          "title": "Sustainable production",
+          "body": "Bees keep their stores; we harvest surplus and replant wild forage."
+        },
+        {
+          "icon": "traditional",
+          "title": "Traditional harvest",
+          "body": "Hand-lifted frames, cold extraction and gravity settling."
+        }
+      ],
+      "steps": [
+        {
+          "num": "Step 01",
+          "title": "The bloom",
+          "body": "Spring opens the meadows and hives follow wild thyme and lavender."
+        },
+        {
+          "num": "Step 02",
+          "title": "The forage",
+          "body": "Worker bees visit hundreds of flowers to gather the season."
+        },
+        {
+          "num": "Step 03",
+          "title": "The ripening",
+          "body": "Nectar matures in comb until the bees cap it themselves."
+        },
+        {
+          "num": "Step 04",
+          "title": "The harvest",
+          "body": "Frames are lifted at dawn and cold-extracted by hand."
+        },
+        {
+          "num": "Step 05",
+          "title": "The jar",
+          "body": "Bottled in glass within 48 hours and tested for purity."
+        }
+      ],
+      "reviews": [
+        {
+          "quote": "The first spoon tasted like a summer field. The quality is immediate.",
+          "name": "Amina B.",
+          "meta": "Casablanca, Morocco",
+          "initials": "AB"
+        },
+        {
+          "quote": "We serve it with cheese. Guests always ask where it comes from.",
+          "name": "Karim L.",
+          "meta": "Chef, Rabat",
+          "initials": "KL"
+        },
+        {
+          "quote": "Clear batch and apiary traceability. A honey house that shows its work.",
+          "name": "Salma H.",
+          "meta": "Marrakech, Morocco",
+          "initials": "SH"
+        }
+      ],
+      "natureStats": [
+        {
+          "value": "12",
+          "count": 12,
+          "suffix": " ha",
+          "label": "Meadow replanted"
+        },
+        {
+          "value": "30",
+          "count": 30,
+          "suffix": "%",
+          "label": "Hives left unharvested"
+        },
+        {
+          "value": "2",
+          "count": 2,
+          "suffix": "%",
+          "label": "To pollinator research"
+        }
+      ]
     },
     "fr": {
       "nav": [
@@ -184,13 +400,121 @@
       "natureBody": "Un tiers de votre assiette dépend des pollinisateurs. Chaque pot aide à restaurer les prairies sauvages.",
       "reviewsEyebrow": "Aimé par 2 140 foyers",
       "reviewsTitle": "Ce que le pot laisse en mémoire",
-      "ctaEyebrow": "Livraison offerte dès 60 €",
+      "ctaEyebrow": "Livraison offerte dès 600 MAD",
       "ctaTitle": "Invitez l’or de la nature",
       "ctaAccent": "chez vous.",
       "ctaBody": "La récolte de cette saison est limitée. Réservez votre pot, expédié sous 48 heures.",
       "footerBody": "Apiculteurs en famille depuis 1974. Miel brut, récolté à la main et traçable jusqu’à la ruche.",
       "copyright": "Tous droits réservés.",
-      "purity": "Brut · Non filtré · Non pasteurisé"
+      "purity": "Brut · Non filtré · Non pasteurisé",
+      "filterAll": "Tout",
+      "categoryLabel": "Catégorie",
+      "stock_in_stock": "En stock",
+      "stock_low_stock": "Stock limité",
+      "stock_out_of_stock": "Rupture de stock",
+      "orderWhatsApp": "Commander sur WhatsApp",
+      "quantity": "Quantité",
+      "buyerPhone": "Votre téléphone",
+      "location": "Ville ou lieu de livraison",
+      "cancel": "Annuler",
+      "sendOrder": "Continuer sur WhatsApp",
+      "orderTitle": "Finalisez votre commande",
+      "orderIntro": "WhatsApp s’ouvrira avec votre commande prête à envoyer.",
+      "phonePlaceholder": "ex. 06 XX XX XX XX",
+      "locationPlaceholder": "ex. Casablanca, Maarif",
+      "deliveryTrust": "Livraison rapide au Maroc · Paiement à la livraison",
+      "featuredOffers": "Offres de saison",
+      "bundleLabel": "Avantage coffret",
+      "promoLabel": "Code promo",
+      "benefits": [
+        {
+          "icon": "natural",
+          "title": "100 % naturel",
+          "body": "Brut, non pasteurisé et non filtré. Un seul ingrédient : le miel."
+        },
+        {
+          "icon": "nutrients",
+          "title": "Naturellement riche",
+          "body": "Enzymes, pollen et antioxydants préservés sans chaleur."
+        },
+        {
+          "icon": "sustainable",
+          "title": "Production durable",
+          "body": "Les abeilles gardent leurs réserves; nous récoltons le surplus."
+        },
+        {
+          "icon": "traditional",
+          "title": "Récolte traditionnelle",
+          "body": "Cadres levés à la main, extraction à froid et décantation naturelle."
+        }
+      ],
+      "steps": [
+        {
+          "num": "Étape 01",
+          "title": "La floraison",
+          "body": "Au printemps, les ruches suivent le thym et la lavande sauvages."
+        },
+        {
+          "num": "Étape 02",
+          "title": "Le butinage",
+          "body": "Les ouvrières visitent des centaines de fleurs pour saisir la saison."
+        },
+        {
+          "num": "Étape 03",
+          "title": "La maturation",
+          "body": "Le nectar mûrit en rayon jusqu’à être operculé par les abeilles."
+        },
+        {
+          "num": "Étape 04",
+          "title": "La récolte",
+          "body": "Les cadres sont levés à l’aube et extraits à froid."
+        },
+        {
+          "num": "Étape 05",
+          "title": "Le pot",
+          "body": "Mis en verre sous 48 heures et testé pour sa pureté."
+        }
+      ],
+      "reviews": [
+        {
+          "quote": "La première cuillère avait le goût d’un champ d’été. La qualité est évidente.",
+          "name": "Amina B.",
+          "meta": "Casablanca, Maroc",
+          "initials": "AB"
+        },
+        {
+          "quote": "Nous le servons avec le fromage. Les convives demandent toujours sa provenance.",
+          "name": "Karim L.",
+          "meta": "Chef, Rabat",
+          "initials": "KL"
+        },
+        {
+          "quote": "Traçabilité claire du lot et du rucher. Une maison qui montre son travail.",
+          "name": "Salma H.",
+          "meta": "Marrakech, Maroc",
+          "initials": "SH"
+        }
+      ],
+      "natureStats": [
+        {
+          "value": "12",
+          "count": 12,
+          "suffix": " ha",
+          "label": "Prairies replantées"
+        },
+        {
+          "value": "30",
+          "count": 30,
+          "suffix": "%",
+          "label": "Ruches non récoltées"
+        },
+        {
+          "value": "2",
+          "count": 2,
+          "suffix": "%",
+          "label": "Pour la recherche"
+        }
+      ]
     }
   },
   "products": [
@@ -198,7 +522,7 @@
       "id": "wild-meadow",
       "active": true,
       "stock": "in_stock",
-      "price": 24,
+      "price": 189,
       "unit": "500 g",
       "images": [
         "/assets/products-collection.webp"
@@ -237,13 +561,14 @@
             "Finale longue"
           ]
         }
-      }
+      },
+      "category": "honey"
     },
     {
       "id": "mountain-trio",
       "active": true,
       "stock": "in_stock",
-      "price": 58,
+      "price": 449,
       "unit": "3 × 250 g",
       "images": [
         "/assets/hero-honey-jar.webp"
@@ -282,13 +607,14 @@
             "Romarin"
           ]
         }
-      }
+      },
+      "category": "honey"
     },
     {
       "id": "fresh-comb",
       "active": true,
       "stock": "low_stock",
-      "price": 31,
+      "price": 239,
       "unit": "350 g",
       "images": [
         "/assets/bees-pollination.webp"
@@ -327,6 +653,283 @@
             "Sur commande"
           ]
         }
+      },
+      "category": "honey"
+    },
+    {
+      "id": "atlas-thyme",
+      "active": true,
+      "stock": "in_stock",
+      "price": 219,
+      "unit": "250 g",
+      "category": "honey",
+      "images": [
+        "/assets/hero-honey-jar.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "عسل زعتر الأطلس",
+          "short": "عطري وقوي من مرتفعات الأطلس",
+          "description": "عطري وقوي من مرتفعات الأطلس",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Atlas Thyme Honey",
+          "short": "Bold and aromatic from Atlas slopes",
+          "description": "Bold and aromatic from Atlas slopes",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Miel de thym de l’Atlas",
+          "short": "Intense et aromatique des pentes de l’Atlas",
+          "description": "Intense et aromatique des pentes de l’Atlas",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "orange-blossom",
+      "active": true,
+      "stock": "in_stock",
+      "price": 169,
+      "unit": "250 g",
+      "category": "honey",
+      "images": [
+        "/assets/products-collection.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "عسل زهر البرتقال",
+          "short": "ناعم وحمضي بلمسة حمضيات",
+          "description": "ناعم وحمضي بلمسة حمضيات",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Orange Blossom Honey",
+          "short": "Silky, bright and delicately citrus",
+          "description": "Silky, bright and delicately citrus",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Miel de fleur d’oranger",
+          "short": "Soyeux, vif et délicatement citronné",
+          "description": "Soyeux, vif et délicatement citronné",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "propolis-drops",
+      "active": true,
+      "stock": "in_stock",
+      "price": 139,
+      "unit": "30 ml",
+      "category": "propolis",
+      "images": [
+        "/assets/hero-jar-portrait.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "قطرات البروبوليس",
+          "short": "مستخلص نقي للاستخدام اليومي",
+          "description": "مستخلص نقي للاستخدام اليومي",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Propolis Drops",
+          "short": "Pure hive extract for daily rituals",
+          "description": "Pure hive extract for daily rituals",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Gouttes de propolis",
+          "short": "Extrait pur pour le rituel quotidien",
+          "description": "Extrait pur pour le rituel quotidien",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bee-pollen",
+      "active": true,
+      "stock": "in_stock",
+      "price": 119,
+      "unit": "250 g",
+      "category": "pollen",
+      "images": [
+        "/assets/bees-pollination.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "حبوب لقاح الجبل",
+          "short": "حبيبات زهرية ملونة مجففة بلطف",
+          "description": "حبيبات زهرية ملونة مجففة بلطف",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Mountain Bee Pollen",
+          "short": "Colourful floral granules, gently dried",
+          "description": "Colourful floral granules, gently dried",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Pollen de montagne",
+          "short": "Granules floraux séchés avec soin",
+          "description": "Granules floraux séchés avec soin",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "royal-jelly",
+      "active": true,
+      "stock": "in_stock",
+      "price": 289,
+      "unit": "250 g",
+      "category": "royal-jelly",
+      "images": [
+        "/assets/hero-honey-jar.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "غذاء ملكات طازج",
+          "short": "يحفظ مبردًا لضمان النضارة",
+          "description": "يحفظ مبردًا لضمان النضارة",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Fresh Royal Jelly",
+          "short": "Kept chilled for peak freshness",
+          "description": "Kept chilled for peak freshness",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Gelée royale fraîche",
+          "short": "Conservée au frais pour sa fraîcheur",
+          "description": "Conservée au frais pour sa fraîcheur",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
+      }
+    },
+    {
+      "id": "beeswax-candles",
+      "active": true,
+      "stock": "in_stock",
+      "price": 159,
+      "unit": "2 قطع",
+      "category": "beeswax",
+      "images": [
+        "/assets/products-collection.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "شموع شمع النحل",
+          "short": "مصنوعة يدويًا برائحة العسل الطبيعية",
+          "description": "مصنوعة يدويًا برائحة العسل الطبيعية",
+          "badge": "جديد",
+          "notes": [
+            "طبيعي",
+            "مغربي",
+            "حرفي"
+          ]
+        },
+        "en": {
+          "name": "Beeswax Candle Pair",
+          "short": "Hand-poured with a naturally warm scent",
+          "description": "Hand-poured with a naturally warm scent",
+          "badge": "New",
+          "notes": [
+            "Natural",
+            "Moroccan",
+            "Crafted"
+          ]
+        },
+        "fr": {
+          "name": "Duo de bougies en cire",
+          "short": "Coulées à la main au parfum chaleureux",
+          "description": "Coulées à la main au parfum chaleureux",
+          "badge": "Nouveau",
+          "notes": [
+            "Naturel",
+            "Marocain",
+            "Artisanal"
+          ]
+        }
       }
     }
   ],
@@ -334,7 +937,7 @@
     {
       "id": "discovery",
       "active": true,
-      "price": 72,
+      "price": 699,
       "productIds": [
         "wild-meadow",
         "mountain-trio"
@@ -385,5 +988,56 @@
     "story": "/assets/bees-pollination.webp",
     "nature": "/assets/bees-pollination.webp",
     "cta": "/assets/products-collection.webp"
-  }
+  },
+  "settings": {
+    "whatsappNumber": "212600000000",
+    "currency": "MAD",
+    "deliveryNote": {
+      "ar": "الطلب عبر واتساب · الدفع عند التسليم",
+      "en": "Order on WhatsApp · Pay on delivery",
+      "fr": "Commande WhatsApp · Paiement à la livraison"
+    }
+  },
+  "categories": [
+    {
+      "id": "honey",
+      "translations": {
+        "ar": "العسل",
+        "en": "Honey",
+        "fr": "Miel"
+      }
+    },
+    {
+      "id": "propolis",
+      "translations": {
+        "ar": "البروبوليس",
+        "en": "Propolis",
+        "fr": "Propolis"
+      }
+    },
+    {
+      "id": "pollen",
+      "translations": {
+        "ar": "حبوب اللقاح",
+        "en": "Pollen",
+        "fr": "Pollen"
+      }
+    },
+    {
+      "id": "royal-jelly",
+      "translations": {
+        "ar": "غذاء ملكات النحل",
+        "en": "Royal jelly",
+        "fr": "Gelée royale"
+      }
+    },
+    {
+      "id": "beeswax",
+      "translations": {
+        "ar": "شمع النحل",
+        "en": "Beeswax",
+        "fr": "Cire d’abeille"
+      }
+    }
+  ]
 }

@@ -1,104 +1,18 @@
-export type Product = {
-  name: string
-  badge?: string
-  image: string
-  alt: string
-  notes: string[]
-  price: string
-  unit: string
-  href?: string
-  description?: string
-  stock?: string
-}
-
-const DEFAULT_PRODUCTS: Product[] = [
-  {
-    name: "Wild Meadow Reserve",
-    badge: "Signature",
-    image: "/assets/products-collection.webp",
-    alt: "Amber jars of BOUZID wild meadow honey with fresh honeycomb",
-    notes: ["Caramel", "Wild thyme", "Long finish"],
-    price: "\u20ac24",
-    unit: "500 g jar",
-  },
-  {
-    name: "Mountain Blossom Trio",
-    badge: "Gift set",
-    image: "/assets/hero-honey-jar.webp",
-    alt: "BOUZID honey jar with a dipper, lit by warm golden light",
-    notes: ["Orange blossom", "Chestnut", "Rosemary"],
-    price: "\u20ac58",
-    unit: "3 \u00d7 250 g",
-  },
-  {
-    name: "Honeycomb, Cut Fresh",
-    badge: "Limited",
-    image: "/assets/bees-pollination.webp",
-    alt: "Honeybees gathering nectar on a purple wildflower",
-    notes: ["Raw comb", "Floral wax", "Cut to order"],
-    price: "\u20ac31",
-    unit: "350 g box",
-  },
-]
-
-/** Premium product grid: 3D pointer-tilt cards, image zoom, floating shadows. */
-export default function Products({
-  eyebrow = "The collection",
-  title = "Three harvests, three characters",
-  body = "Every jar is traceable to a single apiary and a single bloom window. We bottle what the season gives - never blended, never stretched.",
-  products = DEFAULT_PRODUCTS,
-  actionLabel = "Add to basket",
-}: {
-  eyebrow?: string
-  title?: string
-  body?: string
-  products?: Product[]
-  actionLabel?: string
-}) {
-  return (
-    <section className="section section-dark comb-bg" id="products" aria-labelledby="products-title">
-      <div className="wrap">
-        <div className="section-head">
-          <p className="eyebrow reveal">{eyebrow}</p>
-          <h2 id="products-title" className="reveal" data-delay="90">
-            {title}
-          </h2>
-          <p className="lede reveal" data-delay="160">
-            {body}
-          </p>
-        </div>
-
-        <div className="product-grid">
-          {products.map((p, i) => (
-            <article key={p.name} className="card-3d glass lift reveal" data-delay={60 + i * 100}>
-              <div className="card-media">
-                {p.badge ? <span className="badge">{p.badge}</span> : null}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt={p.alt} loading="lazy" width={1200} height={800} />
-              </div>
-              <div className="card-body">
-                <h3>{p.name}</h3>
-                <ul className="card-notes">
-                  {p.notes.map((n) => (
-                    <li key={n} className="note">
-                      {n}
-                    </li>
-                  ))}
-                </ul>
-                <div className="card-foot">
-                  <p className="price">
-                    {p.price}
-                    <small>{p.unit}</small>
-                  </p>
-                  <a className="link-gold" href={p.href ?? "#shop"}>
-                    {actionLabel} <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+"use client"
+import {FormEvent,useMemo,useState} from "react"
+export type Product={id:string;name:string;badge?:string;image:string;alt:string;notes:string[];price:number;unit:string;description:string;stock:string;categoryId:string;category:string}
+type Labels=Record<string,string>
+export default function Products({eyebrow,title,body,products,categories,locale,whatsappNumber,labels,bundles=[],promotions=[]}:{eyebrow:string;title:string;body:string;products:Product[];categories:{id:string;name:string}[];locale:string;whatsappNumber:string;labels:Labels;bundles?:any[];promotions?:any[]}){const [filter,setFilter]=useState("all"),[selected,setSelected]=useState<Product|null>(null);const [qty,setQty]=useState(1),[phone,setPhone]=useState(""),[location,setLocation]=useState("");const shown=useMemo(()=>filter==="all"?products:products.filter(p=>p.categoryId===filter),[filter,products]);function submit(e:FormEvent){e.preventDefault();if(!selected)return;const messages:any={ar:`مرحبًا بوزيد، أريد طلب:
+المنتج: ${selected.name}
+الكمية: ${qty}
+هاتف الزبون: ${phone}
+مكان التوصيل: ${location}`,en:`Hello BOUZID, I would like to order:
+Product: ${selected.name}
+Quantity: ${qty}
+Customer phone: ${phone}
+Delivery location: ${location}`,fr:`Bonjour BOUZID, je souhaite commander :
+Produit : ${selected.name}
+Quantité : ${qty}
+Téléphone : ${phone}
+Lieu de livraison : ${location}`};window.open(`https://wa.me/${whatsappNumber.replace(/\D/g,"")}?text=${encodeURIComponent(messages[locale]||messages.ar)}`,"_blank","noopener,noreferrer")}
+return <section className="section section-dark comb-bg commerce" id="products" aria-labelledby="products-title"><div className="wrap"><div className="section-head"><p className="eyebrow reveal">{eyebrow}</p><h2 id="products-title" className="reveal" data-delay="90">{title}</h2><p className="lede reveal" data-delay="160">{body}</p></div><div className="category-bar" role="tablist" aria-label={labels.categoryLabel}><button className={filter==="all"?"active":""} onClick={()=>setFilter("all")}>{labels.filterAll}</button>{categories.map(c=><button key={c.id} className={filter===c.id?"active":""} onClick={()=>setFilter(c.id)}>{c.name}</button>)}</div><div className="product-grid commercial-grid">{shown.map((p,i)=><article key={p.id} className="card-3d glass lift reveal" data-delay={Math.min(60+i*60,360)}><div className="card-media">{p.badge&&<span className="badge">{p.badge}</span>}<img src={p.image} alt={p.alt} loading="lazy" width={1200} height={800}/></div><div className="card-body"><div className="product-meta"><span>{p.category}</span><span className={`stock-dot ${p.stock}`}>{labels[`stock_${p.stock}`]}</span></div><h3>{p.name}</h3><p className="product-description">{p.description}</p><ul className="card-notes">{p.notes.map(n=><li key={n} className="note">{n}</li>)}</ul><div className="card-foot commercial-foot"><p className="price">{locale==="ar"?`${p.price} د.م.`:`${p.price} MAD`}<small>{p.unit}</small></p><button className="whatsapp-buy" disabled={p.stock==="out_of_stock"} onClick={()=>{setSelected(p);setQty(1)}}><span>◉</span>{labels.orderWhatsApp}</button></div><p className="delivery-trust">✓ {labels.deliveryTrust}</p></div></article>)}</div>{(bundles.length>0||promotions.length>0)&&<div className="offers-strip"><div><p className="eyebrow">{labels.featuredOffers}</p><h3>{bundles[0]?.name}</h3><span>{labels.bundleLabel} · {locale==="ar"?`${bundles[0]?.price} د.م.`:`${bundles[0]?.price} MAD`}</span></div>{promotions[0]&&<div className="promo-code"><span>{labels.promoLabel}</span><b>{promotions[0].code}</b><em>-{promotions[0].value}%</em></div>}</div>}</div>{selected&&<div className="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-title" onMouseDown={e=>e.target===e.currentTarget&&setSelected(null)}><form onSubmit={submit}><button className="modal-close" type="button" onClick={()=>setSelected(null)} aria-label={labels.cancel}>×</button><p className="admin-kicker">WHATSAPP ORDER</p><h2 id="order-title">{labels.orderTitle}</h2><p>{labels.orderIntro}</p><div className="order-product"><img src={selected.image} alt=""/><div><b>{selected.name}</b><span>{locale==="ar"?`${selected.price} د.م.`:`${selected.price} MAD`}</span></div></div><label>{labels.quantity}<input type="number" min="1" max="99" value={qty} onChange={e=>setQty(+e.target.value)} required/></label><label>{labels.buyerPhone}<input type="tel" value={phone} placeholder={labels.phonePlaceholder} onChange={e=>setPhone(e.target.value)} required/></label><label>{labels.location}<input value={location} placeholder={labels.locationPlaceholder} onChange={e=>setLocation(e.target.value)} required/></label><div className="modal-actions"><button type="button" className="modal-cancel" onClick={()=>setSelected(null)}>{labels.cancel}</button><button className="whatsapp-submit">{labels.sendOrder} <span>↗</span></button></div></form></div>}</section>}

@@ -22,7 +22,7 @@ export default function SiteHeader({
       <div className="wrap nav-inner">
         <a className="nav-logo" href="#main" aria-label="BOUZID home">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} alt="BOUZID" width={152} height={34} />
+          {logo ? <img src={logo} alt="BOUZID" width={152} height={34} /> : <span className="logo-fallback">BOUZID</span>}
         </a>
         <nav className="nav-links" aria-label="Primary">
           {links.map((l) => (
