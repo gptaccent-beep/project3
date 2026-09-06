@@ -1474,3 +1474,6 @@ h3,
     opacity: 1;
   }
 }
+
+/* Locale and content-management additions */
+.language-switcher{display:flex;gap:2px;border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:3px;background:rgba(15,8,3,.42)}.language-switcher button{min-width:30px;min-height:30px;border:0;background:transparent;color:rgba(255,244,214,.65);font-size:10px;font-weight:700;border-radius:5px;cursor:pointer}.language-switcher button.active{background:var(--gold);color:var(--brown-deep)}html[dir="rtl"] .hero-veil{transform:scaleX(-1)}html[dir="rtl"] .hero-copy,html[dir="rtl"] .section-head,html[dir="rtl"] .nature-panel{text-align:right}html[dir="rtl"] .eyebrow::before{order:2}html[dir="rtl"] .link-gold span{display:inline-block;transform:rotate(180deg)}@media(max-width:900px){.language-switcher{margin-inline-start:auto}.nav-cta{display:none}}

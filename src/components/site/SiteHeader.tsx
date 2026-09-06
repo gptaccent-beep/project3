@@ -1,3 +1,4 @@
+import type React from "react"
 /** Fixed glass navigation. `is-stuck` / `is-open` states handled by public/motion.js. */
 export default function SiteHeader({
   links = [
@@ -9,10 +10,12 @@ export default function SiteHeader({
   ],
   cta = "Shop honey",
   logo = "/assets/bouzid-wordmark.svg",
+  localeControl,
 }: {
   links?: { href: string; label: string }[]
   cta?: string
   logo?: string
+  localeControl?: React.ReactNode
 }) {
   return (
     <header className="nav">
@@ -28,6 +31,7 @@ export default function SiteHeader({
             </a>
           ))}
         </nav>
+        {localeControl}
         <a className="btn btn-gold nav-cta" href="#shop">
           <span>{cta}</span>
         </a>

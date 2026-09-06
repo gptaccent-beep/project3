@@ -7,6 +7,8 @@ export type Product = {
   price: string
   unit: string
   href?: string
+  description?: string
+  stock?: string
 }
 
 const DEFAULT_PRODUCTS: Product[] = [
@@ -45,11 +47,13 @@ export default function Products({
   title = "Three harvests, three characters",
   body = "Every jar is traceable to a single apiary and a single bloom window. We bottle what the season gives - never blended, never stretched.",
   products = DEFAULT_PRODUCTS,
+  actionLabel = "Add to basket",
 }: {
   eyebrow?: string
   title?: string
   body?: string
   products?: Product[]
+  actionLabel?: string
 }) {
   return (
     <section className="section section-dark comb-bg" id="products" aria-labelledby="products-title">
@@ -87,7 +91,7 @@ export default function Products({
                     <small>{p.unit}</small>
                   </p>
                   <a className="link-gold" href={p.href ?? "#shop"}>
-                    Add to basket <span aria-hidden="true">&rarr;</span>
+                    {actionLabel} <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
               </div>

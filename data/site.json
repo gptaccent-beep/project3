@@ -1,0 +1,389 @@
+{
+  "branding": {
+    "logo": "/assets/bouzid-wordmark.svg",
+    "mark": "/assets/bouzid-logo.svg",
+    "favicon": "/assets/bouzid-logo.svg"
+  },
+  "seo": {
+    "ar": {
+      "title": "بوزيد | عسل خام من مصدر واحد",
+      "description": "عسل بوزيد خام، مستخرج على البارد ومحصول يدويًا من مروج الجبال البرية."
+    },
+    "en": {
+      "title": "BOUZID | Raw single-origin honey",
+      "description": "Raw, cold-extracted, single-origin honey harvested by hand from wild mountain meadows."
+    },
+    "fr": {
+      "title": "BOUZID | Miel brut monofloral",
+      "description": "Miel brut, extrait à froid et récolté à la main dans les prairies sauvages de montagne."
+    }
+  },
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "visible": true,
+      "order": 0
+    },
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "id": "products",
+      "type": "products",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "id": "story",
+      "type": "story",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "id": "benefits",
+      "type": "benefits",
+      "visible": true,
+      "order": 4
+    },
+    {
+      "id": "nature",
+      "type": "nature",
+      "visible": true,
+      "order": 5
+    },
+    {
+      "id": "testimonials",
+      "type": "testimonials",
+      "visible": true,
+      "order": 6
+    },
+    {
+      "id": "cta",
+      "type": "cta",
+      "visible": true,
+      "order": 7
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "visible": true,
+      "order": 8
+    }
+  ],
+  "copy": {
+    "ar": {
+      "nav": [
+        "المجموعة",
+        "قصتنا",
+        "لماذا بوزيد",
+        "النحل",
+        "الآراء"
+      ],
+      "shop": "تسوق العسل",
+      "skip": "انتقل إلى المحتوى",
+      "heroEyebrow": "خام · غير مصفى · منذ 1974",
+      "heroTitle": "ذهب الطبيعة",
+      "heroAccent": "كنز أصيل",
+      "heroBody": "محصول يدويًا من مروج الجبال البرية، ويُعبأ باردًا في الزجاج خلال ساعات. بلا إضافات ولا تسخين — فقط مذاق الموسم الحي.",
+      "primary": "اكتشف المجموعة",
+      "secondary": "من الزهرة إلى المرطبان",
+      "productsEyebrow": "المجموعة",
+      "productsTitle": "ثلاثة مواسم، ثلاث شخصيات",
+      "productsBody": "كل مرطبان قابل للتتبع إلى منحل واحد وموسم إزهار واحد. نعبئ ما يمنحنا الموسم — بلا خلط أو تمديد.",
+      "add": "أضف للسلة",
+      "storyEyebrow": "قصتنا",
+      "storyTitle": "رحلة من الزهرة إلى العسل",
+      "storyBody": "خمس خطوات، موسم واحد، دون اختصارات.",
+      "benefitsEyebrow": "لماذا بوزيد",
+      "benefitsTitle": "حرفة تتذوقها، وجودة موثقة",
+      "natureEyebrow": "النظام البيئي",
+      "natureTitle": "لا نحل، لا حصاد.",
+      "natureAccent": "ولا نحن.",
+      "natureBody": "ثلث ما يصل إلى مائدتك يعتمد على الملقحات. مناحلنا تعيد ممرات الغذاء البرية، وكل مرطبان يمول زراعة المزيد من الزهور.",
+      "reviewsEyebrow": "محبوب لدى 2,140 أسرة",
+      "reviewsTitle": "ما يتركه المرطبان في الذاكرة",
+      "ctaEyebrow": "توصيل مجاني للطلبات فوق €60",
+      "ctaTitle": "أدخل ذهب الطبيعة",
+      "ctaAccent": "إلى بيتك.",
+      "ctaBody": "محصول هذا الموسم محدود. احجز مرطبانك وسنرسله خلال 48 ساعة.",
+      "footerBody": "نحالون عائليون منذ 1974. عسل خام محصول يدويًا ويمكن تتبعه إلى الخلية.",
+      "copyright": "جميع الحقوق محفوظة.",
+      "purity": "خام · غير مصفى · غير مبستر"
+    },
+    "en": {
+      "nav": [
+        "Collection",
+        "Our story",
+        "Why BOUZID",
+        "The bees",
+        "Reviews"
+      ],
+      "shop": "Shop honey",
+      "skip": "Skip to content",
+      "heroEyebrow": "Raw · Unfiltered · Since 1974",
+      "heroTitle": "Nature’s Golden",
+      "heroAccent": "Treasure",
+      "heroBody": "Harvested by hand from wild mountain meadows, poured cold into glass within hours. Nothing added, nothing heated — just the whole living taste of the season.",
+      "primary": "Taste the collection",
+      "secondary": "Flower to jar",
+      "productsEyebrow": "The collection",
+      "productsTitle": "Three harvests, three characters",
+      "productsBody": "Every jar is traceable to a single apiary and bloom window. We bottle what the season gives — never blended, never stretched.",
+      "add": "Add to basket",
+      "storyEyebrow": "Our story",
+      "storyTitle": "The journey from flower to honey",
+      "storyBody": "Five steps, one season, zero shortcuts.",
+      "benefitsEyebrow": "Why BOUZID",
+      "benefitsTitle": "Craft you can taste, proof you can read",
+      "natureEyebrow": "The ecosystem",
+      "natureTitle": "No bees, no harvest.",
+      "natureAccent": "No us.",
+      "natureBody": "A third of everything on your table depends on pollinators. Every jar helps restore wildflower forage.",
+      "reviewsEyebrow": "Loved by 2,140 households",
+      "reviewsTitle": "What the jar leaves behind",
+      "ctaEyebrow": "Free delivery over €60",
+      "ctaTitle": "Bring nature’s gold",
+      "ctaAccent": "into your home.",
+      "ctaBody": "This season’s harvest is limited. Reserve yours and we ship within 48 hours.",
+      "footerBody": "Family beekeepers since 1974. Raw honey, harvested by hand, traceable to the hive.",
+      "copyright": "All rights reserved.",
+      "purity": "Raw · Unfiltered · Unpasteurised"
+    },
+    "fr": {
+      "nav": [
+        "Collection",
+        "Notre histoire",
+        "Pourquoi BOUZID",
+        "Les abeilles",
+        "Avis"
+      ],
+      "shop": "Acheter le miel",
+      "skip": "Aller au contenu",
+      "heroEyebrow": "Brut · Non filtré · Depuis 1974",
+      "heroTitle": "L’or de la nature",
+      "heroAccent": "à l’état pur",
+      "heroBody": "Récolté à la main dans les prairies sauvages de montagne, mis en pot à froid en quelques heures. Rien d’ajouté, rien de chauffé.",
+      "primary": "Découvrir la collection",
+      "secondary": "De la fleur au pot",
+      "productsEyebrow": "La collection",
+      "productsTitle": "Trois récoltes, trois caractères",
+      "productsBody": "Chaque pot est traçable jusqu’à un rucher et une floraison uniques. Jamais mélangé, jamais dilué.",
+      "add": "Ajouter au panier",
+      "storyEyebrow": "Notre histoire",
+      "storyTitle": "Le voyage de la fleur au miel",
+      "storyBody": "Cinq étapes, une saison, aucun raccourci.",
+      "benefitsEyebrow": "Pourquoi BOUZID",
+      "benefitsTitle": "Un savoir-faire à goûter, une qualité prouvée",
+      "natureEyebrow": "L’écosystème",
+      "natureTitle": "Sans abeilles, pas de récolte.",
+      "natureAccent": "Pas de nous.",
+      "natureBody": "Un tiers de votre assiette dépend des pollinisateurs. Chaque pot aide à restaurer les prairies sauvages.",
+      "reviewsEyebrow": "Aimé par 2 140 foyers",
+      "reviewsTitle": "Ce que le pot laisse en mémoire",
+      "ctaEyebrow": "Livraison offerte dès 60 €",
+      "ctaTitle": "Invitez l’or de la nature",
+      "ctaAccent": "chez vous.",
+      "ctaBody": "La récolte de cette saison est limitée. Réservez votre pot, expédié sous 48 heures.",
+      "footerBody": "Apiculteurs en famille depuis 1974. Miel brut, récolté à la main et traçable jusqu’à la ruche.",
+      "copyright": "Tous droits réservés.",
+      "purity": "Brut · Non filtré · Non pasteurisé"
+    }
+  },
+  "products": [
+    {
+      "id": "wild-meadow",
+      "active": true,
+      "stock": "in_stock",
+      "price": 24,
+      "unit": "500 g",
+      "images": [
+        "/assets/products-collection.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "عسل المروج البرية",
+          "short": "توقيع بوزيد",
+          "description": "عسل كهرماني بطابع الزعتر البري والكراميل.",
+          "badge": "مميز",
+          "notes": [
+            "كراميل",
+            "زعتر بري",
+            "مذاق طويل"
+          ]
+        },
+        "en": {
+          "name": "Wild Meadow Reserve",
+          "short": "The BOUZID signature",
+          "description": "Amber honey with wild thyme, caramel and a long finish.",
+          "badge": "Signature",
+          "notes": [
+            "Caramel",
+            "Wild thyme",
+            "Long finish"
+          ]
+        },
+        "fr": {
+          "name": "Réserve des prairies sauvages",
+          "short": "La signature BOUZID",
+          "description": "Miel ambré aux notes de thym sauvage et de caramel.",
+          "badge": "Signature",
+          "notes": [
+            "Caramel",
+            "Thym sauvage",
+            "Finale longue"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mountain-trio",
+      "active": true,
+      "stock": "in_stock",
+      "price": 58,
+      "unit": "3 × 250 g",
+      "images": [
+        "/assets/hero-honey-jar.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "ثلاثية أزهار الجبل",
+          "short": "ثلاث نكهات موسمية",
+          "description": "مجموعة هدايا من ثلاثة مواسم إزهار.",
+          "badge": "هدية",
+          "notes": [
+            "زهر البرتقال",
+            "كستناء",
+            "إكليل الجبل"
+          ]
+        },
+        "en": {
+          "name": "Mountain Blossom Trio",
+          "short": "Three seasonal expressions",
+          "description": "A gift set spanning three distinct bloom windows.",
+          "badge": "Gift set",
+          "notes": [
+            "Orange blossom",
+            "Chestnut",
+            "Rosemary"
+          ]
+        },
+        "fr": {
+          "name": "Trio des fleurs de montagne",
+          "short": "Trois expressions de saison",
+          "description": "Un coffret cadeau issu de trois floraisons distinctes.",
+          "badge": "Coffret",
+          "notes": [
+            "Fleur d’oranger",
+            "Châtaigne",
+            "Romarin"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fresh-comb",
+      "active": true,
+      "stock": "low_stock",
+      "price": 31,
+      "unit": "350 g",
+      "images": [
+        "/assets/bees-pollination.webp"
+      ],
+      "translations": {
+        "ar": {
+          "name": "شمع عسل طازج",
+          "short": "يقطع حسب الطلب",
+          "description": "شمع خام طازج بقوام زهري رقيق.",
+          "badge": "محدود",
+          "notes": [
+            "شمع خام",
+            "زهري",
+            "حسب الطلب"
+          ]
+        },
+        "en": {
+          "name": "Honeycomb, Cut Fresh",
+          "short": "Cut to order",
+          "description": "Fresh raw comb with floral wax and a delicate finish.",
+          "badge": "Limited",
+          "notes": [
+            "Raw comb",
+            "Floral wax",
+            "Cut to order"
+          ]
+        },
+        "fr": {
+          "name": "Rayon de miel frais",
+          "short": "Découpé sur commande",
+          "description": "Rayon brut frais aux notes florales délicates.",
+          "badge": "Limité",
+          "notes": [
+            "Rayon brut",
+            "Cire florale",
+            "Sur commande"
+          ]
+        }
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "discovery",
+      "active": true,
+      "price": 72,
+      "productIds": [
+        "wild-meadow",
+        "mountain-trio"
+      ],
+      "image": "/assets/products-collection.webp",
+      "translations": {
+        "ar": {
+          "name": "صندوق الاكتشاف",
+          "description": "مختارات للتذوق والإهداء"
+        },
+        "en": {
+          "name": "Discovery Box",
+          "description": "A tasting and gifting selection"
+        },
+        "fr": {
+          "name": "Coffret découverte",
+          "description": "Une sélection à goûter et offrir"
+        }
+      }
+    }
+  ],
+  "promotions": [
+    {
+      "id": "welcome10",
+      "active": true,
+      "type": "percent",
+      "value": 10,
+      "code": "WELCOME10",
+      "starts": "2026-09-01",
+      "ends": "2026-12-31",
+      "translations": {
+        "ar": {
+          "name": "ترحيب بوزيد"
+        },
+        "en": {
+          "name": "BOUZID welcome"
+        },
+        "fr": {
+          "name": "Bienvenue BOUZID"
+        }
+      }
+    }
+  ],
+  "media": {
+    "heroVideo": "/assets/hero-loop.mp4",
+    "heroPoster": "/assets/hero-poster.jpg",
+    "heroCard": "/assets/hero-jar-portrait.webp",
+    "story": "/assets/bees-pollination.webp",
+    "nature": "/assets/bees-pollination.webp",
+    "cta": "/assets/products-collection.webp"
+  }
+}

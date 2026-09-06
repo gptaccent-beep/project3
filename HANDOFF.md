@@ -1,0 +1,25 @@
+# BOUZID Store Handoff
+
+## Run locally
+1. Copy `.env.example` to `.env.local` and replace the password and session secret.
+2. Run `npm install`, then `npm run dev`.
+3. Storefront: `/ar` (default, RTL), `/en`, `/fr`.
+4. Admin: `/admin` or `/0`. Sign in with the environment-backed credentials.
+
+## Store management
+- **Sections:** show/hide and reorder homepage regions.
+- **Products:** add, edit or delete products; edit price, unit, stock and translated text.
+- **Offers:** enable and edit bundles and scheduled promotions.
+- **Languages:** edit all storefront copy in Arabic, English and French. Arabic is the fallback.
+- **Media:** upload replacements for hero, story, nature and CTA imagery.
+- **Settings:** brand asset paths and localized SEO metadata.
+- Select **Publish changes** to save and immediately update the storefront.
+
+## Recommended production storage
+This delivery uses a dependency-free JSON data store and local uploads so it runs immediately. That is suitable for local hosting or a single persistent Node server. **Vercel serverless filesystems are not durable**, so before production on Vercel, use **Supabase Postgres + Storage** (recommended: one vendor, generous starter tier, row-level security) or Postgres + Vercel Blob. The UI and content model can stay the same while the functions in `src/lib/store.ts` and the upload route are replaced by those adapters.
+
+## Security
+The requested shared login is implemented with environment variables and an HTTP-only, HTTPS-only-in-production session cookie. The sample `Bouzid/admin` credentials must be changed before launch. A shared password can let anyone who obtains it edit or delete the store. Production should add rate limiting and lockout, password rotation, audit logs, and ideally 2FA through Auth.js or Clerk.
+
+## About the “domain + 0” shortcut
+`https://example.com0` is a different and generally invalid hostname, so an application cannot route it. The safe equivalent `/0` is included and redirects to `/admin`. A true `domain0` address would require owning and configuring that separate domain in DNS.

@@ -1,0 +1,15 @@
+import SiteHeader from "./SiteHeader"
+import Hero from "./Hero"
+import Products from "./Products"
+import Story from "./Story"
+import Benefits from "./Benefits"
+import BeeNature from "./BeeNature"
+import Testimonials from "./Testimonials"
+import FinalCta from "./FinalCta"
+import SiteFooter from "./SiteFooter"
+import Motion from "./Motion"
+import LanguageSwitcher from "./LanguageSwitcher"
+import type {Locale,SiteContent} from "@/lib/types"
+import {localize} from "@/lib/store"
+const links=["#products","#story","#benefits","#nature","#reviews"]
+export default function Storefront({data,locale}:{data:SiteContent;locale:Locale}){const t=data.copy[locale]||data.copy.ar;const sections=[...data.sections].filter(s=>s.visible).sort((a,b)=>a.order-b.order);const products=data.products.filter(p=>p.active).map(p=>{const x=localize(p.translations,locale);return{name:x.name,badge:x.badge,image:p.images[0],alt:x.description,notes:x.notes,price:`€${p.price}`,unit:p.unit,description:x.description,stock:p.stock}});const render=(s:any)=>{switch(s.type){case"header":return <SiteHeader key={s.id} links={t.nav.map((label:string,i:number)=>({label,href:links[i]}))} cta={t.shop} logo={data.branding.logo} localeControl={<LanguageSwitcher locale={locale}/>}/>;case"hero":return <Hero key={s.id} locale={locale} content={{video:data.media.heroVideo,poster:data.media.heroPoster,cardImage:data.media.heroCard,titleAr:t.heroTitle,titleEn:t.heroTitle,titleFr:t.heroTitle,accentAr:t.heroAccent,accentEn:t.heroAccent,accentFr:t.heroAccent}} dict={{hero:{eyebrow:t.heroEyebrow,title:t.heroTitle,titleAccent:t.heroAccent,body:t.heroBody,ctaPrimary:t.primary,ctaSecondary:t.secondary,badge1:locale==="ar"?"سنة في تربية النحل":"Years of beekeeping",badge2:locale==="ar"?"منحل بري":"Wild meadow apiaries",badge3:locale==="ar"?"تقييمات العملاء":"Customer reviews",badge4:locale==="ar"?"نقاء مختبر":"Lab-tested purity"}}}/>;case"products":return <Products key={s.id} eyebrow={t.productsEyebrow} title={t.productsTitle} body={t.productsBody} products={products} actionLabel={t.add}/>;case"story":return <Story key={s.id} eyebrow={t.storyEyebrow} title={t.storyTitle} body={t.storyBody} image={data.media.story}/>;case"benefits":return <Benefits key={s.id} eyebrow={t.benefitsEyebrow} title={t.benefitsTitle}/>;case"nature":return <BeeNature key={s.id} eyebrow={t.natureEyebrow} title={t.natureTitle} accent={t.natureAccent} body={t.natureBody} image={data.media.nature}/>;case"testimonials":return <Testimonials key={s.id} eyebrow={t.reviewsEyebrow} title={t.reviewsTitle}/>;case"cta":return <FinalCta key={s.id} eyebrow={t.ctaEyebrow} title={t.ctaTitle} accent={t.ctaAccent} body={t.ctaBody} ctaPrimary={t.primary} ctaSecondary={t.secondary} image={data.media.cta}/>;case"footer":return <SiteFooter key={s.id} logo={data.branding.mark} body={t.footerBody} copyright={t.copyright} purity={t.purity}/>;default:return null}};return <><a className="skip-link" href="#main">{t.skip}</a><main id="main">{sections.map(render)}</main><Motion/></>}

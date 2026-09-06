@@ -1,0 +1,5 @@
+import {NextResponse} from "next/server"
+import {cookies} from "next/headers"
+import {valid} from "@/lib/auth"
+import fs from "node:fs/promises";import path from "node:path"
+export async function POST(req:Request){if(!valid((await cookies()).get("bouzid_admin")?.value))return NextResponse.json({error:"Unauthorized"},{status:401});const form=await req.formData();const file=form.get("file");if(!(file instanceof File))return NextResponse.json({error:"File required"},{status:400});if(!file.type.startsWith("image/")&&!file.type.startsWith("video/"))return NextResponse.json({error:"Images or video only"},{status:400});if(file.size>10*1024*1024)return NextResponse.json({error:"Maximum 10 MB"},{status:400});const safe=`${Date.now()}-${file.name.replace(/[^a-zA-Z0-9._-]/g,"-")}`;const dir=path.join(process.cwd(),"public","uploads");await fs.mkdir(dir,{recursive:true});await fs.writeFile(path.join(dir,safe),Buffer.from(await file.arrayBuffer()));return NextResponse.json({url:`/uploads/${safe}`})}
