@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { headers } from "next/headers"
 import "./globals.css"
 import "./visual-premium.css"
+import "./locale-fixes.css"
 import "./admin/admin.css"
 export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||"https://bouzid.com"),icons:{icon:"/assets/bouzid-logo.svg"},robots:{index:true,follow:true}}
 export const viewport:Viewport={themeColor:"#24140a",width:"device-width",initialScale:1}

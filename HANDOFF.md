@@ -41,3 +41,16 @@ The requested shared login is implemented with environment variables and an HTTP
 - Login is limited to five failed attempts per IP in a 15-minute window; sessions use HTTP-only, SameSite=Strict, secure-in-production cookies.
 - Admins can change the password in Settings; the replacement scrypt hash is stored server-side in `data/admin-security.json`. On Vercel, move this small secret record to durable server storage.
 - Product tags are editable by index in AR/EN/FR, with add, remove, and reorder controls.
+
+
+## Save and language-switch fixes
+- Production content uses Vercel Blob when `BLOB_READ_WRITE_TOKEN` is configured; local development continues to use `data/site.json`. Create a Blob store in the Vercel project and redeploy so the token is injected.
+- The motion layer is now idempotent and no longer rewrites React-owned heading or particle markup, preventing first-load and locale-switch layout crashes.
+- Arabic hero typography is loaded after the premium stylesheet, with extra line height and glyph padding so words such as «أصيل» are not clipped.
+
+
+## Cross-device admin login
+- `ADMIN_USERNAME`, `ADMIN_PASSWORD_HASH`, and the same `ADMIN_SESSION_SECRET` must be configured in the Vercel **Production** environment and the site must be redeployed.
+- Password changes are now encrypted with AES-256-GCM and saved to the shared Vercel Blob store, so the new password works on every device and every serverless instance.
+- Each device still receives its own secure session cookie and must sign in once; this is expected security behavior.
+- Keep `BLOB_READ_WRITE_TOKEN` connected. Without shared storage, runtime password changes cannot be synchronized across devices.

@@ -78,17 +78,14 @@ export default function Hero({
       </div>
       <div className="hero-veil" />
       <div className="rays" aria-hidden="true" />
-      <div className="particles" aria-hidden="true">
-        <Bee style={{ left: "12%", top: "26%" }} />
-        <Bee style={{ left: "74%", top: "64%", animationDuration: "18s", animationDelay: "-6s" }} warm />
-      </div>
+      <div className="particles" aria-hidden="true" />
       <div className="hero-hem" aria-hidden="true" />
 
       <div className="wrap hero-grid">
         <div className="hero-copy">
           <p className="eyebrow reveal">{t.eyebrow ?? "Raw \u00b7 Unfiltered \u00b7 Since 1974"}</p>
 
-          <h1 className="h1 split" id="hero-title">
+          <h1 className="h1 reveal" id="hero-title">
             {title} <span className="italic-gold">{accent}</span>
           </h1>
 
