@@ -1,4 +1,5 @@
-import type { CSSProperties } from "react"
+"use client"
+import { useEffect, useState, type CSSProperties } from "react"
 
 /**
  * BOUZID - cinematic hero.
@@ -54,6 +55,14 @@ export default function Hero({
   locale?: string
 }) {
   const t = dict?.hero ?? {}
+  const [playVideo, setPlayVideo] = useState(false)
+  useEffect(() => {
+    const query = window.matchMedia("(min-width: 769px) and (hover: hover) and (pointer: fine)")
+    setPlayVideo(query.matches)
+    const update = () => setPlayVideo(query.matches)
+    query.addEventListener?.("change", update)
+    return () => query.removeEventListener?.("change", update)
+  }, [])
   const title = pick(content, "title", locale, t.title ?? "Nature's Golden")
   const accent = pick(content, "accent", locale, t.titleAccent ?? "Treasure")
   const poster = content?.poster || DEFAULTS.poster
@@ -71,10 +80,10 @@ export default function Hero({
     <section className="hero" aria-labelledby="hero-title">
       {/* Cinematic background: 9s seamless honey montage, poster used for LCP */}
       <div className="hero-media">
-        <video autoPlay muted loop playsInline poster={poster} aria-hidden="true">
+        {playVideo ? <video autoPlay muted loop playsInline preload="metadata" poster={poster} aria-hidden="true">
           <source src={DEFAULTS.videoWebm} type="video/webm" />
           <source src={video} type="video/mp4" />
-        </video>
+        </video> : <img src={poster} alt="" width={1920} height={1080} fetchPriority="high" decoding="async" aria-hidden="true" />}
       </div>
       <div className="hero-veil" />
       <div className="rays" aria-hidden="true" />

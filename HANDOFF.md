@@ -81,3 +81,11 @@ At the owner’s explicit request, this build uses a fixed admin username and a 
 - “Read more” in the story reveals every story step.
 - Every active bundle and promotion is now rendered, rather than only the first one.
 - Internal section links now scroll smoothly and close the mobile navigation after selection.
+
+## Desktop/mobile classification and performance fix
+- Corrected device detection so 1366×768 desktop displays are no longer classified as mobile simply because their height is 768px.
+- Mobile mode now requires a mobile user agent or both a narrow viewport and coarse pointer.
+- Essential mobile hero and section content remains visible even if animation JavaScript is delayed or blocked.
+- Mobile uses the lightweight hero poster instead of downloading/playing the hero video; desktop upgrades to video after hydration.
+- Replaced remote Google font requests with a 57 KB locally hosted Arabic font subset.
+- Enabled deferred rendering for below-the-fold sections where supported.
