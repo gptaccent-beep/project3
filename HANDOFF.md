@@ -89,3 +89,10 @@ At the owner’s explicit request, this build uses a fixed admin username and a 
 - Mobile uses the lightweight hero poster instead of downloading/playing the hero video; desktop upgrades to video after hydration.
 - Replaced remote Google font requests with a 57 KB locally hosted Arabic font subset.
 - Enabled deferred rendering for below-the-fold sections where supported.
+
+## Rendering stability final correction
+- Removed JavaScript device classification completely; responsive behavior now uses only viewport CSS.
+- Desktop layout is forced from 900 px upward, preventing normal PCs and DevTools-sized desktop windows from receiving the phone layout.
+- Reveal content is visible by default on every device, so delayed or blocked animation JavaScript can never produce a blank page.
+- Hero copy, product jar, trust statistics, navigation, and all below-fold sections have explicit visibility and full-width mobile fallbacks.
+- Disabled content-visibility deferral to prevent browsers from presenting sections as blank.
