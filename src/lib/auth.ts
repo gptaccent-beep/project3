@@ -4,7 +4,7 @@ const ADMIN_PASSWORD_HASH="scrypt:7795a67f25aaec346b56ee31fd986b05:b16bdad7c1576
 function verifyPassword(password:string,encoded:string){try{const [kind,saltHex,hashHex]=encoded.split(":");if(kind!=="scrypt"||!saltHex||!hashHex)return false;const expected=Buffer.from(hashHex,"hex"),actual=crypto.scryptSync(password,Buffer.from(saltHex,"hex"),expected.length);return crypto.timingSafeEqual(expected,actual)}catch{return false}}
 function safeTextEqual(a:string,b:string){const left=Buffer.from(a),right=Buffer.from(b);return left.length===right.length&&crypto.timingSafeEqual(left,right)}
 export async function credentials(user:string,pass:string){return safeTextEqual(user,ADMIN_USERNAME)&&verifyPassword(pass,ADMIN_PASSWORD_HASH)}
-export async function changePassword(){return{ok:false,error:"fixed_credentials"}}
+export async function changePassword(_current:string,_next:string){return{ok:false,error:"fixed_credentials"}}
 export function token(){return crypto.createHmac("sha256",ADMIN_PASSWORD_HASH).update("bouzid-fixed-admin-session-v1").digest("hex")}
 export function valid(value?:string){const expected=token();if(!value)return false;try{return crypto.timingSafeEqual(Buffer.from(value),Buffer.from(expected))}catch{return false}}
 const attempts=new Map<string,{count:number;reset:number}>()
