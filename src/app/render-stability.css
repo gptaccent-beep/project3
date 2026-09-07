@@ -1,9 +1,9 @@
 /* Final rendering safety: content is visible without waiting for animation JavaScript. */
 .reveal,.reveal-scale,.img-reveal,.hero-copy,.jar-stage,.trust{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important}.img-reveal::after{display:none!important}main>.section,main>.cta,.contact-section,.footer{content-visibility:visible!important;contain:none!important}html,body,#main{width:100%;max-width:100%;min-width:0;overflow-x:hidden}.hero,.hero-grid,.hero-copy,.jar-stage{min-width:0;max-width:100%}
 /* True desktop layout. No JavaScript device classification is used. */
-@media(min-width:900px){.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr)!important;gap:56px!important}.hero-copy .h1{max-width:15ch!important}.nav-toggle{display:none!important}.nav-links{display:flex!important}}
+@media(min-width:1100px){.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr)!important;gap:56px!important}.hero-copy .h1{max-width:15ch!important}.nav-toggle{display:none!important}.nav-links{display:flex!important}}
 /* Tablets use one readable column. */
-@media(min-width:769px) and (max-width:899px){.hero-grid{grid-template-columns:minmax(0,1fr)!important}.hero-copy,.jar-stage{width:100%!important}.jar-stage{max-width:680px!important;margin-inline:auto!important}}
+@media(min-width:769px) and (max-width:1099px){.hero{min-height:auto!important;padding-block:116px 72px!important}.hero-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;max-width:100%!important;gap:38px!important}.hero-copy{grid-column:1!important;grid-row:1!important;width:100%!important;max-width:820px!important;margin-inline:auto!important}.jar-stage{grid-column:1!important;grid-row:2!important;width:100%!important;max-width:680px!important;margin-inline:auto!important}.hero-copy .h1{max-width:100%!important;font-size:clamp(3rem,7vw,5rem)!important}.hero-actions{max-width:680px}.trust{width:100%!important}.nav-links,.nav-cta{display:none!important}.nav-toggle{display:grid!important}}
 /* Phones: full-width, visible, stable, and fast. */
 @media(max-width:768px){
  html,body{width:100%!important;max-width:100%!important;min-width:0!important;overflow-x:hidden!important}.wrap{width:100%!important;max-width:100%!important;margin-inline:0!important;padding-inline:16px!important}

@@ -96,3 +96,9 @@ At the owner’s explicit request, this build uses a fixed admin username and a 
 - Reveal content is visible by default on every device, so delayed or blocked animation JavaScript can never produce a blank page.
 - Hero copy, product jar, trust statistics, navigation, and all below-fold sections have explicit visibility and full-width mobile fallbacks.
 - Disabled content-visibility deferral to prevent browsers from presenting sections as blank.
+
+## 941px responsive viewport correction
+- The supplied DevTools screenshot showed a 941px viewport. The previous 900px desktop breakpoint forced the two-column RTL hero into that narrow space, clipping the text and leaving a dark area.
+- Desktop two-column mode now starts at 1100px.
+- 769–1099px uses an explicit single-column tablet layout: copy first, product image second.
+- Removed the old content-visibility optimization rule entirely so DevTools and browsers no longer retain deferred blank sections.
