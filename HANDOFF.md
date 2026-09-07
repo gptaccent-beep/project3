@@ -58,3 +58,11 @@ The requested shared login is implemented with environment variables and an HTTP
 
 ## Fixed admin credentials
 At the owner’s explicit request, this build uses a fixed admin username and a server-side scrypt password hash, so no admin credential environment variables are required. Username: `Bouzid`. Password: `Bouzid2026`. The password is not stored in plaintext in browser code. This is convenient but weaker than unique environment-managed credentials; change back to secret-managed authentication before handling sensitive customer or payment data.
+
+## Complete image replacement and mobile release
+- Admin **Products**: open any product, upload a replacement product image, then publish changes.
+- Admin **Offers**: replace each bundle/offer image directly in the offer row.
+- Admin **Media**: replace hero poster/video/card, story, nature, CTA, and every other global media slot.
+- Admin **Settings**: replace the master logo; it updates header, footer, mark, and favicon references.
+- Uploaded files are persisted in Vercel Blob. Supported: JPG, PNG, WebP, AVIF, GIF, SVG, MP4, WebM; maximum 4 MB per upload.
+- The storefront and admin now include viewport containment, narrow-phone layouts down to 320–340 px, safe-area bottom navigation, responsive image/card grids, and additional Arabic RTL heading and form fixes.
