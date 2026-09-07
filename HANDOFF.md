@@ -54,3 +54,7 @@ The requested shared login is implemented with environment variables and an HTTP
 - Password changes are now encrypted with AES-256-GCM and saved to the shared Vercel Blob store, so the new password works on every device and every serverless instance.
 - Each device still receives its own secure session cookie and must sign in once; this is expected security behavior.
 - Keep `BLOB_READ_WRITE_TOKEN` connected. Without shared storage, runtime password changes cannot be synchronized across devices.
+
+
+## Fixed admin credentials
+At the owner’s explicit request, this build uses a fixed admin username and a server-side scrypt password hash, so no admin credential environment variables are required. Username: `Bouzid`. Password: `Bouzid2026`. The password is not stored in plaintext in browser code. This is convenient but weaker than unique environment-managed credentials; change back to secret-managed authentication before handling sensitive customer or payment data.
