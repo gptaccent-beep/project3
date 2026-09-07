@@ -220,7 +220,17 @@
           "suffix": "%",
           "label": "لأبحاث الملقحات"
         }
-      ]
+      ],
+      "showAllProducts": "عرض جميع المنتجات",
+      "showLess": "عرض أقل",
+      "readMore": "اقرأ المزيد",
+      "contactEyebrow": "تواصل معنا",
+      "contactTitle": "نحن هنا لمساعدتك",
+      "contactBody": "للاستفسار عن طلب أو عن منتجاتنا، تواصل معنا مباشرة.",
+      "contactEmail": "البريد الإلكتروني",
+      "contactPhone": "الهاتف",
+      "contactAddress": "العنوان",
+      "contactHours": "أوقات العمل"
     },
     "en": {
       "nav": [
@@ -367,7 +377,17 @@
           "suffix": "%",
           "label": "To pollinator research"
         }
-      ]
+      ],
+      "showAllProducts": "Show all products",
+      "showLess": "Show less",
+      "readMore": "Read more",
+      "contactEyebrow": "Contact us",
+      "contactTitle": "We are here to help",
+      "contactBody": "Questions about an order or our products? Contact us directly.",
+      "contactEmail": "Email",
+      "contactPhone": "Phone",
+      "contactAddress": "Address",
+      "contactHours": "Opening hours"
     },
     "fr": {
       "nav": [
@@ -514,7 +534,17 @@
           "suffix": "%",
           "label": "Pour la recherche"
         }
-      ]
+      ],
+      "showAllProducts": "Voir tous les produits",
+      "showLess": "Voir moins",
+      "readMore": "Lire la suite",
+      "contactEyebrow": "Contactez-nous",
+      "contactTitle": "Nous sommes à votre écoute",
+      "contactBody": "Une question sur une commande ou nos produits ? Contactez-nous directement.",
+      "contactEmail": "E-mail",
+      "contactPhone": "Téléphone",
+      "contactAddress": "Adresse",
+      "contactHours": "Horaires"
     }
   },
   "products": [
@@ -996,6 +1026,20 @@
       "ar": "الطلب عبر واتساب · الدفع عند التسليم",
       "en": "Order on WhatsApp · Pay on delivery",
       "fr": "Commande WhatsApp · Paiement à la livraison"
+    },
+    "contact": {
+      "email": "hello@bouzid.com",
+      "phone": "+212 652 111 058",
+      "address": {
+        "ar": "المغرب",
+        "en": "Morocco",
+        "fr": "Maroc"
+      },
+      "hours": {
+        "ar": "الاثنين – السبت، 9:00 – 18:00",
+        "en": "Monday – Saturday, 9:00–18:00",
+        "fr": "Lundi – samedi, 9h00–18h00"
+      }
     }
   },
   "categories": [

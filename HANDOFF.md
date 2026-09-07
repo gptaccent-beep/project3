@@ -66,3 +66,18 @@ At the owner’s explicit request, this build uses a fixed admin username and a 
 - Admin **Settings**: replace the master logo; it updates header, footer, mark, and favicon references.
 - Uploaded files are persisted in Vercel Blob. Supported: JPG, PNG, WebP, AVIF, GIF, SVG, MP4, WebM; maximum 4 MB per upload.
 - The storefront and admin now include viewport containment, narrow-phone layouts down to 320–340 px, safe-area bottom navigation, responsive image/card grids, and additional Arabic RTL heading and form fixes.
+
+## Definitive Arabic mobile viewport fix
+- Added an explicit mobile viewport declaration and a device-detection fallback for mobile browsers that request or retain a desktop layout viewport.
+- Arabic hero, navigation, trust statistics, product cards, story, CTA, and footer are forced to full-width single-column layouts on phones, including RTL browsers and narrow screens.
+- Verified in a 390 × 844 mobile render with full-width Arabic content and no horizontal displacement.
+
+## Footer, contact, expansion and section-flow release
+- Removed the uploaded image/logo from the footer area.
+- Added a full contact section immediately above the footer.
+- Contact email, phone, Arabic/English/French address, and Arabic/English/French opening hours are editable in Admin → Settings.
+- Contact headings and labels are editable in Admin → Languages.
+- “Show all products” now expands every matching product; “Show less” collapses the list.
+- “Read more” in the story reveals every story step.
+- Every active bundle and promotion is now rendered, rather than only the first one.
+- Internal section links now scroll smoothly and close the mobile navigation after selection.
