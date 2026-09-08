@@ -99,7 +99,13 @@ export default async function ProductPage({
           deliveryNote={data.settings.deliveryNote[locale]}
         />
       </main>
-      <SiteFooter body={t.footerBody} copyright={t.copyright} purity={t.purity} />
+      <SiteFooter
+        body={t.footerBody}
+        copyright={t.copyright}
+        purity={t.purity}
+        social={{ instagram: data.settings.contact?.instagram, facebook: data.settings.contact?.facebook }}
+        locale={locale}
+      />
       <Motion />
     </>
   )
