@@ -348,12 +348,14 @@ body:hover .cursor-aura { opacity: 1; }
 .footer a:hover::after { transform: scaleX(1); }
 
 /* Enhanced reveal choreography */
-.reveal { transform: translate3d(0, 38px, 0); filter: blur(5px); transition: opacity 1s var(--ease), transform 1s var(--ease), filter 1s var(--ease); }
+html.js-ready .reveal:not(.is-in) { transform: translate3d(0, 38px, 0); filter: blur(5px); }
+.reveal { transition: opacity 1s var(--ease), transform 1s var(--ease), filter 1s var(--ease); }
 .reveal.is-in { filter: blur(0); }
-.reveal-scale { transform: scale(.91) translateY(22px); filter: blur(4px); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease), filter 1.1s var(--ease); }
+html.js-ready .reveal-scale:not(.is-in) { transform: scale(.91) translateY(22px); filter: blur(4px); }
+.reveal-scale { transition: opacity 1.1s var(--ease), transform 1.1s var(--ease), filter 1.1s var(--ease); }
 .reveal-scale.is-in { filter: blur(0); }
 .img-reveal::after { background: linear-gradient(110deg, #fff0b7, #d99016 42%, #6e3904); }
-.split .word > span { transform: translateY(120%) rotate(2deg); }
+html.js-ready .split:not(.is-in) .word > span { transform: translateY(120%) rotate(2deg); }
 .split.is-in .word > span { transform: translateY(0) rotate(0); }
 
 @media (max-width: 1024px) {

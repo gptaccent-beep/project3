@@ -1,3 +1,6 @@
-/* Fast, stable font and mobile paint path. */
-@font-face{font-family:"Bouzid Arabic";src:url("/assets/noto-arabic.ttf") format("truetype");font-style:normal;font-weight:100 900;font-display:swap}html[lang="ar"] body,html[lang="ar"] button,html[lang="ar"] input,html[lang="ar"] textarea,html[lang="ar"] select{font-family:"Bouzid Arabic",Tahoma,Arial,sans-serif!important}html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{font-family:"Bouzid Arabic",Tahoma,Arial,sans-serif!important}
+/* Fast, stable font and mobile paint path.
+   NOTE: /assets/noto-arabic.ttf contains NO Arabic glyphs (it is a Latin Noto
+   Sans build), so it is no longer used. Arabic now renders with device fonts,
+   which paint instantly on the first open. */
+html[lang="ar"] body,html[lang="ar"] button,html[lang="ar"] input,html[lang="ar"] textarea,html[lang="ar"] select{font-family:"Noto Kufi Arabic","Noto Naskh Arabic","Geeza Pro","Segoe UI",Tahoma,Arial,sans-serif!important}html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{font-family:"Noto Kufi Arabic","Noto Naskh Arabic","Geeza Pro","Segoe UI",Tahoma,Arial,sans-serif!important}
 @media(max-width:768px){.rays,.particles,.drips,.cursor-aura{display:none!important}.glass,.glass-light,.glass-gold,.nav.is-stuck{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.hero-media img{animation:none!important}}

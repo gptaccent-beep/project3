@@ -1,21 +1,36 @@
-/* ========================================================================== 
+/* ==========================================================================
    BOUZID UNIVERSAL LAYOUT SAFETY LAYER
    Loaded after the visual styles. This file is the final authority for page
    geometry at phone, tablet, desktop and large-screen/TV widths.
+   ==========================================================================
+
+   CONTENT VISIBILITY CONTRACT
+   Nothing on this site may depend on JavaScript to become visible. Entrance
+   animations only run once the inline boot script has added `js-ready`, and
+   the hero never animates at all so the first paint is always readable.
    ========================================================================== */
 
-.reveal,
-.reveal-scale,
-.img-reveal,
+html:not(.js-ready) .reveal,
+html:not(.js-ready) .reveal-scale,
+html:not(.js-ready) .img-reveal,
+html:not(.js-ready) .split .word > span,
+.hero .reveal,
+.hero .reveal-scale,
+.hero .img-reveal,
 .hero-copy,
+.hero-copy > *,
 .jar-stage,
-.trust {
+.trust,
+.trust li {
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
   filter: none !important;
 }
-.img-reveal::after { display: none !important; }
+
+html:not(.js-ready) .img-reveal::after,
+.hero .img-reveal::after { display: none !important; }
+
 
 html,
 body,

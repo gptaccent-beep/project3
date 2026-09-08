@@ -71,7 +71,7 @@ export default function Hero({
 
   const badges = [
     { value: "50", count: 50, suffix: "+", label: t.badge1 ?? "Years of beekeeping" },
-    { value: "120", count: 120, suffix: " hives", label: t.badge2 ?? "Wild meadow apiaries" },
+    { value: "120", count: 120, suffix: locale === "en" ? " hives" : "+", label: t.badge2 ?? "Wild meadow apiaries" },
     { value: "4.9", count: 4.9, suffix: "/5", label: t.badge3 ?? "2,140 reviews" },
     { value: "100", count: 100, suffix: "%", label: t.badge4 ?? "Lab-tested purity" },
   ]
