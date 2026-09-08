@@ -1,9 +1,14 @@
 /**
  * Instagram + Facebook links.
- * Both URLs come from the admin panel (Settings → Contact details) and each
- * icon only renders when its field is filled in, so an empty field never
- * leaves a dead link on the site.
+ * Both URLs come from the admin panel (Settings → Contact details). If a field
+ * has not been filled in yet the icon still shows, using the default page
+ * below, so the buttons are always visible on the site.
  */
+
+const DEFAULTS = {
+  instagram: "https://instagram.com/bouzid.honey",
+  facebook: "https://facebook.com/bouzid.honey",
+}
 
 export type SocialUrls = { instagram?: string; facebook?: string }
 
@@ -52,9 +57,9 @@ export default function SocialLinks({
   variant?: "contact" | "footer"
 }) {
   const l = LABELS[locale] || LABELS.ar
-  const instagram = normalize(social?.instagram || "", "https://instagram.com/")
-  const facebook = normalize(social?.facebook || "", "https://facebook.com/")
-  if (!instagram && !facebook) return null
+  const instagram =
+    normalize(social?.instagram || "", "https://instagram.com/") || DEFAULTS.instagram
+  const facebook = normalize(social?.facebook || "", "https://facebook.com/") || DEFAULTS.facebook
 
   return (
     <div className={variant === "footer" ? "social-row social-row-footer" : "social-row"}>

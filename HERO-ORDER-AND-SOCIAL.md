@@ -58,8 +58,11 @@ You can paste any of these and it works:
 - `bouzid.honey`
 - `@bouzid.honey`
 
-**Leave a field empty and that icon does not appear at all** - no broken link.
-Both fields start empty, so the icons stay hidden until you fill them in.
+The two buttons are **always visible** on the site. They ship pointing at
+`instagram.com/bouzid.honey` and `facebook.com/bouzid.honey`; if a field is left
+empty the button falls back to that default rather than disappearing, so the
+icons can never go missing from the contact section or the footer. Put the real
+handles in the admin panel to point them at your accounts.
 
 Stored in `data/site.json` as `settings.contact.instagram` and
 `settings.contact.facebook`.
