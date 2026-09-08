@@ -1,3 +1,4 @@
+import Bees from "./Bees"
 export type NatureStat = { value: string; count: number; suffix: string; label: string }
 
 const DEFAULT_STATS: NatureStat[] = [
@@ -28,6 +29,7 @@ export default function BeeNature({
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={image} alt="" data-parallax="0.14" loading="lazy" width={1600} height={1000} />
       </div>
+      <Bees variant="wide" />
       <div className="wrap">
         <div className="nature-panel glass reveal">
           <p className="eyebrow">{eyebrow}</p>

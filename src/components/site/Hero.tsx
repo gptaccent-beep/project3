@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState, type CSSProperties } from "react"
+import Bees from "./Bees"
 
 /**
  * BOUZID - cinematic hero.
@@ -90,7 +91,7 @@ export default function Hero({
       <div className="particles" aria-hidden="true" />
       <div className="hero-hem" aria-hidden="true" />
 
-      <div className="wrap hero-grid">
+      <Bees variant="hero" /><div className="wrap hero-grid">
         <div className="hero-copy">
           <p className="eyebrow reveal">{t.eyebrow ?? "Raw \u00b7 Unfiltered \u00b7 Since 1974"}</p>
 

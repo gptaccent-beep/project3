@@ -1,3 +1,5 @@
+import Bees from "./Bees"
+
 /** Final conversion section: "Bring nature's gold into your home." */
 export default function FinalCta({
   eyebrow = "Free delivery over \u20ac60",
@@ -24,6 +26,7 @@ export default function FinalCta({
         style={{ width: 340, height: 340, bottom: -140, right: -60, animationDelay: "-4s" }}
         aria-hidden="true"
       />
+      <Bees variant="wide" />
       <div className="wrap">
         <div className="cta-inner glass-gold reveal">
           <div>
